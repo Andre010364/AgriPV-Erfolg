@@ -1,0 +1,53 @@
+/* Basis-Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* 3D-Karten-Container */
+#cesiumContainer {
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+    margin: 20px auto;
+    border: 3px solid #28a745;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: white;
+}
+
+/* Upload-Button */
+.upload-btn {
+    background: #28a745;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    width: 300px;
+    transition: all 0.3s;
+}
+
+.upload-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Mobile Optimierung */
+@media (max-width: 768px) {
+    #cesiumContainer {
+        height: 400px;
+        width: 95%;
+    }
+    .upload-btn {
+        width: 90%;
+    }
+}

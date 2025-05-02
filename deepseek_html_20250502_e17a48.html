@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AgriPV Geländeanalyse</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.95/Build/Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🌱 Meine AgriPV Geländekarte</h1>
+    <p>Lade deine Geländedaten hoch:</p>
+    
+    <div id="cesiumContainer"></div>
+    
+    <button class="upload-btn" onclick="alert('Upload-Funktion kommt bald!')">
+        🚁 Drohnenbilder hochladen
+    </button>
+
+    <script>
+        Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlYWE1OWUxNy1mMWZiLTQzYjYtYTQ0OS1kMWFjYmFkNjc5YzciLCJpZCI6NTMyNzUsImlhdCI6MTY1OTg0MzQ5NH0.XLwxPyrMA7k-7tEGIVBrbsIN1nVh7YN7S4W5UsFy5xc';
+        const viewer = new Cesium.Viewer('cesiumContainer', {
+            terrainProvider: Cesium.createWorldTerrain(),
+            baseLayerPicker: false,
+            timeline: false,
+            animation: false
+        });
+        viewer.camera.flyTo({ destination: Cesium.Cartesian3.fromDegrees(10.0, 50.0, 2000000) });
+    </script>
+</body>
+</html>
